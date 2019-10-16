@@ -69,7 +69,19 @@ class SkipList:
                     update[i].next_p[i] = new_node
         self.no_of_element +=1
         
-        
+def delete_element(skplst, data):
+    if skplst.no_of_element == 0:
+        raise ValueError("List is EMpty")
+    else:
+        update = skplst.update_vector(data)
+        current = update[0].next_p[0]
+        if update[0].next_p[0] != None and update[0].next_p[0].data == data:
+            for i in range(skplst.max_level-1):
+                if update[i].next_p[i] != current:
+                    break
+                update[i].next_p[i] = current.next_p[i]
+
+
 def print_level(skiplst, level):
     print("level is ", level)
     node = skiplst.head
