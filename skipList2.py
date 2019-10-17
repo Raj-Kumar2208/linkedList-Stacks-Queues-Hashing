@@ -68,6 +68,27 @@ class SkipList:
                     new_node.next_p[i] = update[i].next_p[i]
                     update[i].next_p[i] = new_node
         self.no_of_element +=1
+     
+    def delete_element(self,data):
+        """ deletion function taking care of deletion of max_level also."""
+        if self.length == 0:
+            raise ValueError("List is Empty")
+        else:
+            if self.search_element(data) == None:
+                print("Data is not present in List")
+            else:
+                update = self.update_vector(data)
+                current = update[0].next_p[0]
+                if current != None and current.data == data:
+                    for i in range(self.max_level-1):
+                        if update[i].next_p[i] != current:
+                            break
+                        update[i].next_p[i] = current.next_p[i]
+                else:
+                    for i in range(self.max_level):
+                        update[i].next_p[i] = None
+                while(self.max_level >0 and self.head.next_p[self.max_level-1]==None):
+                    self.max_level -= 1
         
 def delete_element(skplst, data):
     if skplst.no_of_element == 0:
