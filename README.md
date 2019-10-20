@@ -11,5 +11,9 @@ In Linked List, we have implemented few of basic implementations such as
 3) Circular Linked List
 4) Skip List
 
-Each Linked list have following methods such as Insertion, Deletion, Searching, and Traversing. You can refer to python code. In case you want us to implement something done this. Kindly email us at raj.kumar2208@yahoo.in.
-Would like to help other fellow Thanks
+Each Linked list have following methods such as Insertion, Deletion, Searching, and Traversing. You can refer to python code. In case you want us to implement something more than this. Kindly email us at raj.kumar2208@yahoo.in.
+Would like to help other fellow, Thanks
+
+### Stacks
+In stacks, following are
+1) Stack implementation based on Array (in python we have used list data structure for array implementation instead of numpy.array)
