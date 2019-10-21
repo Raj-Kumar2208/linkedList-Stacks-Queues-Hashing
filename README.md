@@ -17,3 +17,4 @@ Would like to help other fellow, Thanks
 ### Stacks
 In stacks, following are
 1) Stack implementation based on Array (in python we have used list data structure for array implementation instead of numpy.array)
+2) Stack implementation based on Dynamic Array. (here dynamic array means, we are using array doubling technique, to optimize above implementation.
